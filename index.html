@@ -1,3 +1,7 @@
+    <!-- New QR code image at the bottom right -->
+    <div class="donate-qr-container">
+        <img src="img/Screenshot 2025-09-08 214856.png" alt="QR Code" class="corner-image">
+    </div>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,41 +11,104 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+        <script>
+        // Add ripple effect to nav links and hamburger button
+        document.addEventListener('DOMContentLoaded', function() {
+            // Ripple for nav links
+            document.querySelectorAll('.nav-links a').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    const ripple = document.createElement('span');
+                    ripple.className = 'ripple';
+                    ripple.style.left = (e.offsetX) + 'px';
+                    ripple.style.top = (e.offsetY) + 'px';
+                    this.appendChild(ripple);
+                    setTimeout(() => ripple.remove(), 600);
+                });
+            });
+            // Ripple for hamburger button
+            var hamburger = document.querySelector('.hamburger');
+            if (hamburger) {
+                hamburger.addEventListener('click', function(e) {
+                    const ripple = document.createElement('span');
+                    ripple.className = 'ripple';
+                    ripple.style.left = (e.offsetX) + 'px';
+                    ripple.style.top = (e.offsetY) + 'px';
+                    this.appendChild(ripple);
+                    setTimeout(() => ripple.remove(), 600);
+                });
+            }
+        });
+        </script>
+        <script>
+        // Add ripple effect to nav links
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.nav-links a').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    const ripple = document.createElement('span');
+                    ripple.className = 'ripple';
+                    ripple.style.left = (e.offsetX) + 'px';
+                    ripple.style.top = (e.offsetY) + 'px';
+                    this.appendChild(ripple);
+                    setTimeout(() => ripple.remove(), 600);
+                });
+            });
+        });
+        </script>
+    <img src="img/cw_logo-2.png" alt="Logo" style="position: fixed; top: 10px; left: 10px; width: 220px; z-index: 3001;">
+    <!-- Navigation Hamburger Menu -->
+    <nav class="navbar">
+        <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('show');">
+            &#9776;
+        </button>
+        <ul class="nav-links">
+            <li><a href="https://www.charitywater.org/the-spring/direct-b?utm_content=branded&msclkid=4540598be2ad1727f42031344a4ae4d7" target="_blank" rel="noopener">Donate</a></li>
+            <li><a href="our-story.html">Our Story</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
     <!-- Hero Section: This is the main banner at the top of the page -->
     <section class="hero">
-        <!-- Main headline -->
-        <h1>Clean Water for Everyone</h1>
-        <!-- Subheadline -->
-        <p>Join us in bringing safe, clean water to communities in need.</p>
-    </section>
-
-    <!-- Story Section: This tells the story of the nonprofit -->
-    <section class="story">
-        <h2>Our Story</h2>
-        <p>
-         
-    </section>
-
-    <!-- Real-World Impact Story Section -->
-    <section class="impact-story">
-        <!-- Section headline -->
-        <h2>Real Impact: Meet Amina</h2>
-        <!-- Container for image and text -->
-        <div class="impact-content">
-            <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
-            <!-- Impact story text -->
-            <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
-            </p>
+        <!-- Main headline and subheadline wrapped for positioning -->
+        <div class="hero-text">
+            <h2>Make water possible and know where every drop goes!</h2>
+            <p>Join the generation that’s funding clean water for families around the world — with fast, simple donations and full transparency on where every dollar ends up, you can be confident that your money will make a wave wherever it goes.</p>
         </div>
     </section>
 
-    <!-- Call-to-Action Section: This encourages visitors to take action -->
-    <section class="call-to-action">
-        <h2>Make a Difference</h2>
-        <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
-    </section>
+    <!-- Story Section: This tells the story of the nonprofit -->
 </body>
+        <!-- Donate QR code and label above the existing QR code -->
+
+        <!-- Arrow at the bottom left to unfold photos -->
+                    <div class="photo-arrow" onclick="
+                        const gallery = document.querySelector('.photo-gallery');
+                        const arrow = this;
+                        const isOpen = gallery.classList.contains('show');
+                        gallery.classList.toggle('show');
+                        if (!isOpen) {
+                            arrow.classList.remove('flip-back');
+                            arrow.classList.add('open');
+                        } else {
+                            arrow.classList.remove('open');
+                            arrow.classList.add('flip-back');
+                            setTimeout(() => arrow.classList.remove('flip-back'), 400);
+                        }
+                    ">
+                        &#8594;
+                    </div>
+        <div class="photo-gallery">
+            <img src="img/eyJidWNrZXQiOiJkcm9wbWFyayIsImtleSI6IjUyMDQzL2NmN2ZmYWE0MThmMjBlY2ZlZDRlYTliN2VlODZiMDMzNTVlMGMzYTY2MjZhZGJhNGMzMDVlYzc3MmE3M2M2NzIvcHJldmlldy85MzQyX0V0aGlvcGlhXzIwMTlfQ0ctLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aC.jpg" alt="Photo 1">
+            <img src="img/eyJidWNrZXQiOiJkcm9wbWFyayIsImtleSI6IjUyMDQzL2ZlZDY5Y2I2OTk5YjQxMGZlOTgxYWIyNmU4YjlmODM3ZGFmYWM1OTY0NWM3ZThkMTg2NjhiN2ZlM2I3ZmRlN2EvcHJldmlldy9aaW1iYWJ3ZV8yMDIyX0NHLTc1OTUuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIj.jpg" alt="Photo 2">
+            <img src="img/eyJidWNrZXQiOiJkcm9wbWFyayIsImtleSI6IjUyMDQzLzE3Yzg3NmVlN2RhYjMyMjc5NDA2ODAzZjU1NjFjZmYyZTgzZTRiNzA0OTI5NWU1NWJmODJhNTJmYzcyNGZiMjIvcHJldmlldy9jaGFyaXR5X3dhdGVyX1RhbnphbmlhX1RhcmFTaHVwZVBob3RvZ3JhcGh5XzAwMTkuanBnIi.jpg" alt="Photo 3">
+                <a href="gallery.html" class="see-more-link">See more</a>
+        </div>
+    <!-- Slightly thinner vertical rectangle on the right side -->
+    <div class="right-rectangle-thin"></div>
+    <!-- Vertical rectangle on the right side -->
+    <div class="right-rectangle"></div>
+    <!-- Bottom bar -->
+        <div class="bottom-bar">
+            <div class="bottom-left-square"></div>
+        </div>
+    <!-- Vertical rectangle on the right side -->
 </html>
